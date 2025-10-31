@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexa-AI - Architectes de la Convergence IT/OT</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importation de la police Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style pour l'effet de survol sur les cartes "pilier" */
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 leading-relaxed">
+
+    <!-- ===== BARRE DE NAVIGATION ===== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800 shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="transition-opacity hover:opacity-80">
+                <!-- Le nom "Hexa-AI" est dans l'attribut alt pour le SEO et l'accessibilité -->
+                <img src="img/Hexa-AI dark.png" alt="Hexa-AI" class="h-8 w-auto">
+            </a>
+            
+            <!-- Liens de navigation (pour écrans larges) -->
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="#solutions" class="text-gray-300 hover:text-white transition-colors">Solutions</a></li>
+                <li><a href="#realisations" class="text-gray-300 hover:text-white transition-colors">Réalisations</a></li>
+                <li><a href="#contact" class="cta-button bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-md shadow-lg hover:bg-blue-700 transform hover:-translate-y-0.5">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION HÉROS ===== -->
+    <header class="relative overflow-hidden bg-cover bg-center bg-fixed" style="background-image: url('img/pilmo-kang-H72SCCTZPE8-unsplash.jpg');">
+        <!-- Conteneur pour l'image de fond et l'overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Overlay pour la lisibilité du texte -->
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+        </div>
+
+        <!-- Conteneur pour le contenu -->
+        <div class="container mx-auto px-6 py-32 md:py-48 relative z-10">
+            <div class="max-w-3xl text-center mx-auto">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                    Unifier vos installations (OT) et vos données (IT).
+                </h1>
+                <h2 class="mt-4 text-xl md:text-2xl font-light text-gray-300">
+                    Architectes de la Convergence IT/OT. Nous bâtissons les solutions sur-mesure que les standards ne couvrent pas.
+                </h2>
+                <a href="https://calendar.app.google/kLXvjUkXtg4DYdHQ8" target="_blank" rel="noopener noreferrer" class="cta-button mt-10 inline-block bg-blue-600 text-white text-lg font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1">
+                    Discutons de votre projet "impossible"
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SECTION PROBLÈMES ("Vous vous sentez bloqué ?") ===== -->
+    <section id="problemes" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+                Les standards ne suffisent plus ?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+                
+                <!-- Problème 1: Logiciel Obsolète -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <p>Un <strong>logiciel obsolète</strong> menace la pérennité de votre produit ?</p>
+                </div>
+                
+                <!-- Problème 2: Workflows Manuels -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-3 8h.01"></path></svg>
+                    <p>Des <strong>workflows manuels</strong> ou papier ralentissent vos équipes ?</p>
+                </div>
+
+                <!-- Problème 3: Données Bloquées -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <p>Vos <strong>données de production</strong> (TRS, coûts) sont bloquées ou inutilisables ?</p>
+                </div>
+
+                <!-- Problème 4: Manque de Standards -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <p>Chaque <strong>nouvelle installation</strong> est un projet complexe au lieu d'un standard ?</p>
+                </div>
+                
+                <!-- Problème 5: Licences Coûteuses -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <p>Les <strong>coûts de licence</strong> pour de simples dashboards sont excessifs ?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION SOLUTIONS (Les 3 Piliers) ===== -->
+    <section id="solutions" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+                Notre expertise : les solutions IT/OT sur-mesure.
+            </h2>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+                Nous nous concentrons sur trois missions où notre double compétence IT/OT apporte une valeur maximale.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Pilier 1: Monitoring & IIoT -->
+                <div class="pillar-card bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-white mb-4">Pilier 1 : Monitoring & IIoT</h3>
+                    <p class="text-gray-300 mb-4">
+                        Nous connectons vos installations (neuves ou anciennes). Nous construisons les indicateurs utiles (TRS, coûts énergétiques) pour vous permettre d'optimiser votre production. Souvent sans licence.
+                    </p>
+                    <p class="mt-auto text-sm text-blue-400 flex items-start"><svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Constructeur de machines, spécialiste du traitement thermique, armateur fluvial...</span></p>
+                </div>
+
+                <!-- Pilier 2: Digitalisation & Outils Métier -->
+                <div class="pillar-card bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-white mb-4">Pilier 2 : Digitalisation & Outils Métier</h3>
+                    <p class="text-gray-300 mb-4">
+                        Nous digitalisons vos workflows. Nous créons vos outils métier sur-mesure (bancs de test) et assurons l'interconnexion de vos logiciels et équipements.
+                    </p>
+                    <p class="mt-auto text-sm text-blue-400 flex items-start"><svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Leader mondial des matériaux, projets de bancs de test, armateur fluvial...</span></p>
+                </div>
+
+                <!-- Pilier 3: Modernisation & Sauvetage Logiciel -->
+                <div class="pillar-card bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-white mb-4">Pilier 3 : Modernisation & Sauvetage Logiciel</h3>
+                    <p class="text-gray-300 mb-4">
+                        Nous sauvons vos produits. Nous redéveloppons votre logique métier obsolète en un nouveau standard moderne, flexible, et prêt à être déployé en série.
+                    </p>
+                    <p class="mt-auto text-sm text-blue-400 flex items-start"><svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Fabricant d'équipements pour le traitement de l'eau.</span></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== SECTION RÉALISATIONS (La Preuve) ===== -->
+    <section id="realisations" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16">
+                Nos Réalisations
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Réalisation 1: Saint-Gobain -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+                    <img src="img/sigmund-Fa9b57hffnM-unsplash.jpg" alt="Projet pour un leader mondial des matériaux" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Leader mondial des matériaux</h3>
+                        <p class="text-gray-300">Digitalisation de 100% des fiches de postes (Ignition, MS SQL).</p>
+                    </div>
+                </div>
+
+                <!-- Réalisation 2: GNSA -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+                    <img src="img/homa-appliances-SaX8ZBFkLTc-unsplash.jpg" alt="Projet pour un constructeur de machines spéciales" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Constructeur de machines spéciales</h3>
+                        <p class="text-gray-300">Monitoring de productivité sans licence (Node-Red, Grafana) pour un constructeur.</p>
+                    </div>
+                </div>
+
+                <!-- Réalisation 3: Imageau -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+                    <img src="img/shoeib-abolhassani-IgU5TItVojA-unsplash.jpg" alt="Projet de sauvetage de produit" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Fabricant d'équipements</h3>
+                        <p class="text-gray-300">Sauvetage d'un produit par migration d'un logiciel obsolète vers CODESYS.</p>
+                    </div>
+                </div>
+                
+                <!-- Réalisation 4: TLO -->
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+                    <img src="img/Traitement-Thermique.png" alt="Projet pour un spécialiste du traitement thermique" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Spécialiste du traitement thermique</h3>
+                        <p class="text-gray-300">Corrélation des coûts d'énergie avec les commandes de production.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#tous-les-projets" class="cta-button text-lg font-semibold text-blue-400 hover:text-blue-300">
+                    Voir tous nos projets →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION CTA FINAL ===== -->
+    <section id="contact" class="py-24 bg-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Votre projet sort du cadre ?
+            </h2>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto mb-8">
+                Nous ne faisons pas que des projets "one-shot". Nous sommes des ingénieurs-produit.
+                Discutons de votre cas spécifique.
+            </p>
+            <a href="https://calendar.app.google/kLXvjUkXtg4DYdHQ8" target="_blank" rel="noopener noreferrer" class="cta-button inline-block bg-white text-blue-700 text-lg font-bold px-10 py-4 rounded-lg shadow-2xl hover:bg-gray-100 transform hover:-translate-y-1">
+                Planifier un audit stratégique gratuit
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p class="text-lg font-semibold text-gray-300 mb-2">Hexa-AI</p>
+            <p class="mb-6">Notre ADN : Expertise des plateformes ouvertes (CODESYS, Ignition, Node-Red...).</p>
+            
+            <!-- Lien discret vers l'espace technicien -->
+            <a href="https://hexa-ai.notion.site/Documentation-HAI-P200-4G-1f151d7dad2f80ebb3fbef6c4cda62ea" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                Vous êtes technicien ? Découvrir notre espace formation & support
+            </a>
+            
+            <!-- Coordonnées et Lien Social -->
+            <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-sm text-gray-400 text-center md:text-left">
+                    <p><strong>Hexa-AI</strong></p>
+                    <p>Bureau B2, Bâtiment Terraditta</p>
+                    <p>287 rue Barthélémy Thimonnier</p>
+                    <p>69530 BRIGNAIS, France</p>
+                    <p class="mt-2"><a href="mailto:contact@hexa-ai.fr" class="hover:text-white">contact@hexa-ai.fr</a></p>
+                    <p><a href="tel:+33666740458" class="hover:text-white">06 66 74 04 58</a></p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.linkedin.com/company/hexaai" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Suivez-nous sur LinkedIn">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <p class="mt-8 text-sm">&copy; 2025 Hexa-AI. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BOUTON "RETOUR EN HAUT" ===== -->
+    <a href="#" id="to-top-button" class="fixed bottom-8 right-8 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-opacity duration-300 opacity-0 pointer-events-none" aria-label="Retour en haut">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </a>
+
+    <script>
+        const toTopButton = document.getElementById('to-top-button');
+
+        window.addEventListener('scroll', () => {
+            // Affiche le bouton après 300px de défilement
+            if (window.scrollY > 300) {
+                toTopButton.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                toTopButton.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+    </script>
+</body>
+</html>
