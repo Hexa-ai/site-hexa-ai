@@ -1,266 +1,1521 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexa-AI - Architectes de la Convergence IT/OT</title>
-    <!-- Chargement de Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Importation de la police Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Style pour l'effet de survol sur les cartes "pilier" */
-        .pillar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hexa-AI — Automatisme industriel à Lyon · Brignais (69)</title>
+<meta name="description" content="Hexa-AI, intégrateur automatisme industriel à Lyon (Brignais). Conception, supervision et modernisation sur CODESYS, Wago, Beckhoff, Siemens, Schneider, Johnson Controls. Auvergne-Rhône-Alpes & France entière.">
+<meta name="theme-color" content="#0a0f14">
+<meta name="author" content="Hexa-AI">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hexa-AI">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://www.hexa-ai.fr">
+<meta property="og:title" content="Hexa-AI — Automatisme industriel à Lyon · Brignais (69)">
+<meta property="og:description" content="On automatise, connecte et modernise vos installations industrielles — là où les autres s'arrêtent. Basés à Brignais (Lyon Sud).">
+<meta property="og:image" content="https://www.hexa-ai.fr/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hexa-AI — Automatisme et connectivité industrielle">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hexa-AI — Automatisme industriel à Lyon · Brignais (69)">
+<meta name="twitter:description" content="On automatise, connecte et modernise vos installations industrielles — là où les autres s'arrêtent. Basés à Brignais (Lyon Sud).">
+<meta name="twitter:image" content="https://www.hexa-ai.fr/img/og-image.jpg">
+
+<link rel="canonical" href="https://www.hexa-ai.fr/">
+<link rel="icon" href="/favicon.ico?v=2026-05-03" sizes="any">
+
+<!-- JSON-LD ProfessionalService (local SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.hexa-ai.fr/#org",
+  "name": "Hexa-AI",
+  "alternateName": "Hexa-AI - Automatisme industriel",
+  "url": "https://www.hexa-ai.fr",
+  "logo": "https://www.hexa-ai.fr/img/Hexa-AI%20dark.png",
+  "image": "https://www.hexa-ai.fr/img/og-image.jpg",
+  "description": "Intégrateur en automatisme industriel à Lyon (Brignais). Conception, supervision et modernisation d'installations sur CODESYS, Wago, Beckhoff, Siemens, Schneider, Johnson Controls.",
+  "email": "contact@hexa-ai.fr",
+  "telephone": "+33666740458",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bureau B2, Bâtiment Terraditta, 287 rue Barthélémy Thimonnier",
+    "postalCode": "69530",
+    "addressLocality": "Brignais",
+    "addressRegion": "Auvergne-Rhône-Alpes",
+    "addressCountry": "FR"
+  },
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "Siège social",
+    "value": "6 rue Jean Marie Chevalier, 69390 Vourles, France"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.6695,
+    "longitude": 4.7547
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Lyon" },
+    { "@type": "AdministrativeArea", "name": "Auvergne-Rhône-Alpes" },
+    { "@type": "Country", "name": "France" }
+  ],
+  "knowsAbout": [
+    "Automatisme industriel",
+    "CODESYS",
+    "Wago",
+    "Beckhoff",
+    "Siemens",
+    "Schneider Electric",
+    "Johnson Controls",
+    "Isma Controlli",
+    "Ignition SCADA",
+    "PC-Vue",
+    "Node-RED",
+    "Grafana",
+    "Modbus",
+    "OPC-UA",
+    "DALI",
+    "GTB / GTC",
+    "Supervision industrielle",
+    "IIoT"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/hexaai"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   1. TOKENS
+   ========================================================= */
+:root {
+  --bg-base: #0a0f14;
+  --bg-surface: #11181f;
+  --bg-surface-hi: #14202a;
+  --border: #1d2832;
+  --border-hi: #2a3a47;
+  --text: #e6edf3;
+  --text-mute: #9aa8b3;
+  --text-dim: #6b7884;
+  --accent: #00d4aa;
+  --accent-hi: #1ae5bb;
+  --accent-dim: rgba(0, 212, 170, 0.12);
+  --accent-glow: rgba(0, 212, 170, 0.25);
+  --danger: #ff7a7a;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --container: 1180px;
+  --container-narrow: 960px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --nav-h: 64px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-base);
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul { list-style: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* =========================================================
+   3. UTILITIES
+   ========================================================= */
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--space-5); }
+.container--narrow { max-width: var(--container-narrow); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eyebrow--mono { font-variant-numeric: tabular-nums; }
+
+h1, h2, h3, h4 { color: var(--text); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+h3 { font-size: clamp(20px, 2.2vw, 24px); }
+p { color: var(--text-mute); }
+
+.section { padding: var(--space-10) 0; position: relative; }
+.section + .section { border-top: 1px solid var(--border); }
+.section__head { text-align: center; max-width: 720px; margin: 0 auto var(--space-8); }
+.section__head .eyebrow { margin-bottom: var(--space-3); }
+.section__head h2 { color: var(--text); }
+.section__head p { margin-top: var(--space-4); font-size: 17px; }
+
+@media (max-width: 768px) {
+  .section { padding: var(--space-9) 0; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 1;
+}
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg-base);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hi);
+  box-shadow: 0 10px 28px var(--accent-glow);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.btn--ghost:hover {
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+}
+.btn--small {
+  padding: 10px 16px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   4. NAV
+   ========================================================= */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  background: rgba(10, 15, 20, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.nav.is-scrolled {
+  background: rgba(10, 15, 20, 0.92);
+  box-shadow: 0 1px 0 var(--border-hi), 0 6px 20px rgba(0,0,0,0.3);
+}
+.nav.is-menu-open {
+  background: var(--bg-base);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.nav__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo img { height: 28px; width: auto; display: block; }
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+}
+.nav__links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-mute);
+  transition: color 0.15s;
+  position: relative;
+  padding: 4px 0;
+}
+.nav__links a:hover { color: var(--text); }
+.nav__links a.btn--primary { color: var(--bg-base); padding: 10px 16px; }
+.nav__links a.btn--primary:hover { color: var(--bg-base); }
+.nav__links a.btn--primary::after { display: none; }
+.nav__links a.is-active {
+  color: var(--text);
+}
+.nav__links a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -8px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+.nav__cta { margin-left: var(--space-3); }
+.nav__burger {
+  display: none;
+  width: 40px; height: 40px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.nav__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  position: absolute;
+  transition: transform 0.3s var(--ease), opacity 0.2s;
+}
+.nav__burger span:nth-child(1) { transform: translateY(-6px); }
+.nav__burger span:nth-child(2) { transform: translateY(0); }
+.nav__burger span:nth-child(3) { transform: translateY(6px); }
+.nav__burger.is-open span:nth-child(1) { transform: translateY(0) rotate(45deg); }
+.nav__burger.is-open span:nth-child(2) { opacity: 0; }
+.nav__burger.is-open span:nth-child(3) { transform: translateY(0) rotate(-45deg); }
+
+.nav__panel {
+  position: fixed;
+  inset: var(--nav-h) 0 0 0;
+  background: var(--bg-base);
+  display: none;
+  flex-direction: column;
+  padding: var(--space-7) var(--space-5);
+  z-index: 40;
+}
+.nav__panel a {
+  display: block;
+  padding: var(--space-4) 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.nav__panel a.btn--primary {
+  margin-top: var(--space-5);
+  border: 0;
+  color: var(--bg-base);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__burger { display: flex; }
+  .nav__panel.is-open { display: flex; }
+  body.no-scroll { overflow: hidden; }
+}
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  padding: calc(var(--nav-h) + var(--space-9)) 0 var(--space-9);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: -10%;
+  background-image:
+    linear-gradient(rgba(0, 212, 170, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 170, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+  will-change: transform;
+}
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 30%, var(--bg-base) 78%),
+    linear-gradient(180deg, rgba(10,15,20,0.4) 0%, transparent 30%, transparent 70%, var(--bg-base) 100%);
+}
+.hero__nodes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero__node {
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent-glow);
+  animation: pulse 3.6s ease-in-out infinite;
+}
+.hero__node:nth-child(1) { left: 12%; top: 30%; animation-delay: 0s; }
+.hero__node:nth-child(2) { left: 78%; top: 22%; animation-delay: 0.8s; }
+.hero__node:nth-child(3) { left: 88%; top: 70%; animation-delay: 1.6s; }
+.hero__node:nth-child(4) { left: 18%; top: 78%; animation-delay: 2.4s; }
+.hero__node:nth-child(5) { left: 56%; top: 14%; animation-delay: 1.2s; }
+.hero__node:nth-child(6) { left: 32%; top: 60%; animation-delay: 2.0s; }
+@keyframes pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.hero__inner > * { opacity: 0; transform: translateY(16px); animation: rise 0.6s var(--ease) forwards; }
+.hero__inner > *:nth-child(1) { animation-delay: 0.05s; }
+.hero__inner > *:nth-child(2) { animation-delay: 0.15s; }
+.hero__inner > *:nth-child(3) { animation-delay: 0.25s; }
+.hero__inner > *:nth-child(4) { animation-delay: 0.35s; }
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5.4vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--text);
+}
+.hero h1 strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+.hero__sub {
+  margin-top: var(--space-5);
+  font-size: clamp(16px, 1.5vw, 19px);
+  color: var(--text-mute);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__ctas {
+  margin-top: var(--space-7);
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: rise 0.6s var(--ease) 0.6s forwards;
+}
+.hero__scroll svg { width: 14px; height: 14px; animation: bob 2s ease-in-out infinite; }
+@keyframes bob {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(4px); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+}
+
+/* =========================================================
+   6. SITUATIONS (Section 2)
+   ========================================================= */
+.situations__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-5);
+}
+.situation {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s var(--ease);
+}
+.situation::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 2px;
+  background: var(--accent);
+  transition: width 0.3s var(--ease);
+}
+.situation:hover {
+  border-color: var(--border-hi);
+  transform: translateY(-3px);
+}
+.situation:hover::before { width: 100%; }
+.situation__num {
+  font-family: 'Inter', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: var(--space-4);
+}
+.situation h3 {
+  font-size: 18px;
+  margin-bottom: var(--space-3);
+  color: var(--text);
+}
+.situation p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-mute);
+}
+
+/* =========================================================
+   7. DOMAINES (Section 3)
+   ========================================================= */
+.domains__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+.domain {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.domain:hover {
+  border-color: var(--accent);
+  background: var(--bg-surface-hi);
+  transform: translateY(-4px);
+}
+.domain__icon {
+  width: 56px; height: 56px;
+  border-radius: 12px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+  color: var(--accent);
+}
+.domain__icon svg { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.domain h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  color: var(--text);
+}
+.domain p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-mute);
+}
+
+/* =========================================================
+   8. PRODUIT (Section 4)
+   ========================================================= */
+.product { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.product__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-9);
+  align-items: center;
+}
+.product__copy h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: var(--space-3); }
+.product__copy .lead {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: var(--space-5);
+}
+.product__copy p { font-size: 15.5px; line-height: 1.65; margin-bottom: var(--space-6); }
+.product__badges { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-6); }
+.product__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-hi);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
+}
+.product__badge strong { color: var(--accent); font-weight: 600; }
+
+.product__visual {
+  position: relative;
+  aspect-ratio: 1.05 / 1;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(0, 212, 170, 0.12), transparent 60%),
+    radial-gradient(circle at 70% 80%, rgba(0, 212, 170, 0.06), transparent 50%),
+    var(--bg-surface-hi);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+.product__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 170, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 170, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.product__visual img {
+  position: relative;
+  z-index: 1;
+  max-width: 88%;
+  max-height: 88%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.45));
+  transition: transform 0.5s var(--ease);
+  image-rendering: -webkit-optimize-contrast;
+}
+.product__visual:hover img { transform: translateY(-4px) scale(1.02); }
+
+@media (max-width: 900px) {
+  .product__layout { grid-template-columns: 1fr; gap: var(--space-7); }
+  .product__visual { max-width: 480px; margin: 0 auto; }
+}
+
+/* =========================================================
+   8b. PLATFORMS STRIP
+   ========================================================= */
+.platforms {
+  background: var(--bg-base);
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--border);
+}
+.platforms__label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: var(--space-6);
+}
+.platforms__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-5) var(--space-7);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.platform {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgba(230, 237, 243, 0.55);
+  letter-spacing: 0.01em;
+  transition: color 0.2s, transform 0.2s var(--ease);
+  white-space: nowrap;
+}
+.platform:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .platforms { padding: var(--space-7) 0; }
+  .platforms__grid { gap: var(--space-4) var(--space-5); }
+  .platform { font-size: 14.5px; }
+}
+
+/* =========================================================
+   9. RÉFÉRENCES (Section 5)
+   ========================================================= */
+.refs__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-5);
+}
+.ref { grid-column: span 2; }
+/* 5 cards: center the last row of 2 (cards 4 + 5) */
+.ref:nth-child(3n+1):nth-last-child(2) { grid-column: 2 / span 2; }
+/* If a single orphan remains (e.g. 4 or 7 cards), center it */
+.ref:last-child:nth-child(3n+1) { grid-column: 3 / span 2; }
+.ref {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+}
+.ref:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hi);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+.ref__img {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-surface-hi);
+}
+.ref__img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s var(--ease);
+  filter: saturate(0.85) brightness(0.85);
+}
+.ref:hover .ref__img img { transform: scale(1.05); }
+.ref__img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10,15,20,0.55));
+  pointer-events: none;
+}
+.ref__body {
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.ref__label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+.ref__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: var(--space-3);
+  line-height: 1.25;
+}
+.ref__title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.ref__title-link svg { width: 14px; height: 14px; opacity: 0.55; transition: opacity 0.15s, transform 0.15s var(--ease); }
+.ref__title-aux { font-weight: 500; color: var(--text-mute); font-size: 0.85em; }
+.ref__title-link:hover { color: var(--accent); border-bottom-color: rgba(0, 212, 170, 0.45); }
+.ref__title-link:hover svg { opacity: 1; transform: translate(2px, -2px); }
+.ref__desc strong { color: var(--text); font-weight: 600; }
+.ref__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-mute);
+  margin-bottom: var(--space-4);
+  flex: 1;
+}
+.ref__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ref__tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+.ref--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+.ref--featured .ref__img { aspect-ratio: auto; height: 100%; }
+.ref--featured .ref__body { padding: var(--space-7); justify-content: center; }
+.ref--featured .ref__title { font-size: 22px; }
+.ref--featured .ref__desc { font-size: 15px; }
+
+@media (max-width: 1000px) {
+  .refs__grid { grid-template-columns: repeat(4, 1fr); }
+  .ref { grid-column: span 2; }
+  .ref:nth-child(3n+1):nth-last-child(2) { grid-column-start: auto; }
+  .ref:last-child:nth-child(2n+1) { grid-column: 2 / span 2; }
+  .ref:last-child:nth-child(3n+1) { grid-column-start: auto; }
+}
+@media (max-width: 640px) {
+  .refs__grid { grid-template-columns: 1fr; }
+  .ref, .ref:last-child:nth-child(2n+1) { grid-column: 1 / -1; }
+}
+
+/* =========================================================
+   10. CONTACT (Section 6)
+   ========================================================= */
+.contact { background: var(--bg-base); }
+.contact__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact h2 { font-size: clamp(30px, 4.5vw, 44px); }
+.contact .lead {
+  margin-top: var(--space-4);
+  font-size: 19px;
+  color: var(--text);
+}
+.contact .lead strong { color: var(--accent); font-weight: 600; }
+.contact p.note {
+  margin-top: var(--space-4);
+  font-size: 15px;
+  color: var(--text-mute);
+}
+.contact__cta { margin-top: var(--space-7); }
+.contact__info {
+  margin-top: var(--space-8);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-5);
+  text-align: left;
+}
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.contact__item .label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.contact__item .value {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+.contact__item a:hover { color: var(--accent); }
+
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
+.footer {
+  background: var(--bg-base);
+  border-top: 1px solid var(--border);
+  padding: var(--space-8) 0 var(--space-6);
+  font-size: 13.5px;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-7);
+  align-items: start;
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid var(--border);
+}
+.footer__bottom {
+  margin-top: var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  font-size: 12.5px;
+}
+.footer__copy { color: var(--text-dim); }
+.footer__links { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+.footer__links a { color: var(--text-mute); transition: color 0.15s; }
+.footer__links a:hover { color: var(--accent); }
+.footer__legal { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.footer__legal a { color: var(--text-dim); transition: color 0.15s; }
+.footer__legal a:hover { color: var(--accent); }
+
+.newsletter { max-width: 420px; }
+.newsletter__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.newsletter__sub {
+  font-size: 13px;
+  color: var(--text-mute);
+  margin-bottom: var(--space-3);
+}
+.newsletter__form {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+.newsletter__input {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hi);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 14px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.newsletter__input::placeholder { color: var(--text-dim); }
+.newsletter__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg-surface-hi);
+}
+.newsletter__btn {
+  background: var(--accent);
+  color: var(--bg-base);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s var(--ease);
+  white-space: nowrap;
+}
+.newsletter__btn:hover { background: var(--accent-hi); transform: translateY(-1px); }
+.newsletter__btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+.newsletter__msg {
+  margin-top: 8px;
+  font-size: 12.5px;
+  min-height: 18px;
+  color: var(--text-mute);
+}
+.newsletter__msg.is-error { color: var(--danger); }
+.newsletter__msg.is-success { color: var(--accent); }
+.newsletter.is-submitted .newsletter__form { display: none; }
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-4);
+}
+.footer__social { display: flex; gap: var(--space-3); }
+.footer__social a {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text-mute);
+  transition: color 0.15s, border-color 0.15s, transform 0.2s;
+}
+.footer__social a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.footer__social svg { width: 18px; height: 18px; fill: currentColor; }
+
+@media (max-width: 768px) {
+  .footer__top { grid-template-columns: 1fr; }
+  .footer__right { align-items: flex-start; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* =========================================================
+   12. BACK TO TOP
+   ========================================================= */
+.to-top {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px var(--accent-glow);
+  z-index: 30;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s var(--ease), background 0.2s;
+}
+.to-top.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.to-top:hover { background: var(--accent-hi); }
+.to-top svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* =========================================================
+   13. REVEAL
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-1 { transition-delay: 0.08s; }
+.reveal.delay-2 { transition-delay: 0.16s; }
+.reveal.delay-3 { transition-delay: 0.24s; }
+.reveal.delay-4 { transition-delay: 0.32s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  .hero__inner > * { opacity: 1; transform: none; }
+}
+
+/* No-JS fallback */
+.no-js .reveal, .no-js .hero__inner > * { opacity: 1; transform: none; }
+.no-js .nav__burger, .no-js .to-top { display: none; }
+.no-js .nav__links { display: flex !important; }
+
+/* Print */
+@media print {
+  body { background: #fff; color: #111; }
+  .nav, .to-top, .hero__bg, .hero__nodes, .hero__scroll, .footer__social, .newsletter, .platforms { display: none !important; }
+  .hero { min-height: auto; padding: 24px 0; }
+  .hero h1, .hero__sub, .section h2, .ref__title, .domain h3, .situation h3, .contact h2 { color: #111; }
+  .ref, .situation, .domain, .product__visual { border: 1px solid #ccc; background: #fff; box-shadow: none; }
+  p, .ref__desc { color: #333; }
+  .ref__tag, .product__badge, .eyebrow, .ref__label { color: #00866a; background: #f3fbf8; border-color: #d1ede4; }
+  a { color: #00866a; text-decoration: underline; }
+  .footer { background: #fff; border-top: 1px solid #ccc; }
+  .footer__copy { color: #666; }
+}
+</style>
 </head>
-<body class="bg-gray-900 text-gray-200 leading-relaxed">
 
-    <!-- ===== BARRE DE NAVIGATION ===== -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800 shadow-md">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="transition-opacity hover:opacity-80">
-                <!-- Le nom "Hexa-AI" est dans l'attribut alt pour le SEO et l'accessibilité -->
-                <img src="img/Hexa-AI dark.png" alt="Hexa-AI" class="h-8 w-auto">
-            </a>
-            
-            <!-- Liens de navigation (pour écrans larges) -->
-            <ul class="hidden md:flex items-center space-x-8">
-                <li><a href="#solutions" class="text-gray-300 hover:text-white transition-colors">Solutions</a></li>
-                <li><a href="#realisations" class="text-gray-300 hover:text-white transition-colors">Réalisations</a></li>
-                <li><a href="#contact" class="cta-button bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-md shadow-lg hover:bg-blue-700 transform hover:-translate-y-0.5">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body>
 
-    <!-- ===== SECTION HÉROS ===== -->
-    <header class="relative overflow-hidden bg-cover bg-center bg-fixed" style="background-image: url('img/pilmo-kang-H72SCCTZPE8-unsplash.jpg');">
-        <!-- Conteneur pour l'image de fond et l'overlay -->
-        <div class="absolute inset-0 z-0">
-            <!-- Overlay pour la lisibilité du texte -->
-            <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
-        </div>
-
-        <!-- Conteneur pour le contenu -->
-        <div class="container mx-auto px-6 py-32 md:py-48 relative z-10">
-            <div class="max-w-3xl text-center mx-auto">
-                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
-                    Unifier vos installations (OT) et vos données (IT).
-                </h1>
-                <h2 class="mt-4 text-xl md:text-2xl font-light text-gray-300">
-                    Architectes de la Convergence IT/OT. Nous bâtissons les solutions sur-mesure que les standards ne couvrent pas.
-                </h2>
-                <a href="https://calendar.app.google/kLXvjUkXtg4DYdHQ8" target="_blank" rel="noopener noreferrer" class="cta-button mt-10 inline-block bg-blue-600 text-white text-lg font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1">
-                    Discutons de votre projet "impossible"
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- ===== SECTION PROBLÈMES ("Vous vous sentez bloqué ?") ===== -->
-    <section id="problemes" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-                Les standards ne suffisent plus ?
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-                
-                <div class="bg-gray-700 p-6 rounded-lg lg:col-start-2">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <p>La pérennité de votre produit est menacée par un <strong>logiciel obsolète</strong> ou un <strong>manque de standardisation</strong> ?</p>
-                </div>
-                
-                <div class="bg-gray-700 p-6 rounded-lg">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-3 8h.01"></path></svg>
-                    <p>Des <strong>workflows manuels</strong> et des <strong>fichiers Excel</strong> non connectés ralentissent vos équipes ?</p>
-                </div>
-                
-                <div class="bg-gray-700 p-6 rounded-lg">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    <p>Vos <strong>données de production</strong> sont <strong>bloquées</strong> ou vos <strong>coûts de licence</strong> pour les visualiser sont excessifs ?</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SECTION SOLUTIONS (Les 3 Piliers) ===== -->
-    <section id="solutions" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
-                Notre expertise : les solutions IT/OT sur-mesure.
-            </h2>
-            <p class="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-                Nous nous concentrons sur trois missions où notre double compétence IT/OT apporte une valeur maximale.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Pilier 1: Monitoring & IIoT -->
-                <div class="pillar-card bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 transition-all duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-4">Pilier 1 : Monitoring & IIoT</h3>
-                    <p class="text-gray-300 mb-4">
-                        Nous connectons vos installations (neuves ou anciennes). Nous construisons les indicateurs utiles (TRS, coûts énergétiques) pour vous permettre d'optimiser votre production. Souvent sans licence.
-                    </p>
-                    <p class="mt-auto text-sm text-blue-400 flex items-start"><svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Constructeur de machines, spécialiste du traitement thermique, armateur fluvial...</span></p>
-                </div>
-
-                <!-- Pilier 2: Digitalisation & Outils Métier -->
-                <div class="pillar-card bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 transition-all duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-4">Pilier 2 : Digitalisation & Outils Métier</h3>
-                    <p class="text-gray-300 mb-4">
-                        Nous digitalisons vos workflows. Nous créons vos outils métier sur-mesure et assurons l'interconnexion de vos logiciels et équipements.
-                    </p>
-                    <p class="mt-auto text-sm text-blue-400 flex items-start"><svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Leader mondial des matériaux, projets de bancs de test, armateur fluvial...</span></p>
-                </div>
-
-                <!-- Pilier 3: Modernisation & Sauvetage Logiciel -->
-                <div class="pillar-card bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 transition-all duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-4">Pilier 3 : Modernisation & Sauvetage Logiciel</h3>
-                    <p class="text-gray-300 mb-4">
-                        Nous sauvons vos produits. Nous redéveloppons votre logique métier obsolète en un nouveau standard moderne, flexible, et prêt à être déployé en série.
-                    </p>
-                    <p class="mt-auto text-sm text-blue-400 flex items-start"><svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Fabricant d'équipements pour le traitement de l'eau.</span></p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===== SECTION RÉALISATIONS (La Preuve) ===== -->
-    <section id="realisations" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-                Nos Réalisations
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Réalisation 1: -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
-                    <img src="img/sigmund-Fa9b57hffnM-unsplash.jpg" alt="Projet pour un leader mondial des matériaux" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Leader mondial des matériaux</h3>
-                        <p class="text-gray-300">Digitalisation de 100% des fiches de postes (Ignition, MS SQL).</p>
-                    </div>
-                </div>
-
-                <!-- Réalisation 2:  -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
-                    <img src="img/homa-appliances-SaX8ZBFkLTc-unsplash.jpg" alt="Projet pour un constructeur de machines spéciales" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Constructeur de machines spéciales</h3>
-                        <p class="text-gray-300">Monitoring de productivité sans licence (Node-Red, Grafana) pour un constructeur.</p>
-                    </div>
-                </div>
-
-                <!-- Réalisation 3: -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
-                    <img src="img/shoeib-abolhassani-IgU5TItVojA-unsplash.jpg" alt="Projet de sauvetage de produit" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Fabricant d'équipements</h3>
-                        <p class="text-gray-300">Sauvetage d'un produit par migration d'un logiciel obsolète vers CODESYS.</p>
-                    </div>
-                </div>
-                
-                <!-- Réalisation 4: -->
-                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-xl">
-                    <img src="img/Traitement-Thermique.png" alt="Projet pour un spécialiste du traitement thermique" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Spécialiste du traitement thermique</h3>
-                        <p class="text-gray-300">Corrélation des coûts d'énergie avec les commandes de production.</p>
-                    </div>
-                </div>
-
-            </div>
-            
-            <!--<div class="text-center mt-12">
-                <a href="#tous-les-projets" class="cta-button text-lg font-semibold text-blue-400 hover:text-blue-300">
-                    Voir tous nos projets →
-                </a>
-            </div>-->
-        </div>
-    </section>
-
-    <!-- ===== SECTION CTA FINAL ===== -->
-    <section id="contact" class="py-24 bg-blue-700 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                Votre projet sort du cadre ?
-            </h2>
-            <p class="text-xl text-blue-200 max-w-2xl mx-auto mb-8">
-                Ne laissez pas un problème technique freiner votre croissance. Votre projet sort du cadre standard ? C'est là que nous commençons.
-            </p>
-            <a href="https://calendar.app.google/kLXvjUkXtg4DYdHQ8" target="_blank" rel="noopener noreferrer" class="cta-button inline-block bg-white text-blue-700 text-lg font-bold px-10 py-4 rounded-lg shadow-2xl hover:bg-gray-100 transform hover:-translate-y-1">
-                Planifier un audit stratégique gratuit
-            </a>
-        </div>
-    </section>
-
-    <!-- ===== PIED DE PAGE ===== -->
-    <footer class="py-16 bg-gray-900">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p class="text-lg font-semibold text-gray-300 mb-2">Hexa-AI</p>
-            <p class="mb-6">Notre ADN : Expertise des plateformes ouvertes (CODESYS, Ignition, Node-Red...).</p>
-            
-            <!-- Lien discret vers l'espace technicien -->
-            <a href="https://hexa-ai.notion.site/Documentation-HAI-P200-4G-1f151d7dad2f80ebb3fbef6c4cda62ea" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                Vous êtes technicien ? Découvrir notre espace formation & support
-            </a>
-            
-            <!-- Coordonnées et Lien Social -->
-            <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="text-sm text-gray-400 text-center md:text-left">
-                    <p><strong>Hexa-AI</strong></p>
-                    <p>Bureau B2, Bâtiment Terraditta</p>
-                    <p>287 rue Barthélémy Thimonnier</p>
-                    <p>69530 BRIGNAIS, France</p>
-                    <p class="mt-2"><a href="mailto:contact@hexa-ai.fr" class="hover:text-white">contact@hexa-ai.fr</a></p>
-                    <p><a href="tel:+33666740458" class="hover:text-white">06 66 74 04 58</a></p>
-                </div>
-                <div class="flex items-center gap-4">
-                    <a href="https://www.linkedin.com/company/hexaai" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Suivez-nous sur LinkedIn">
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <p class="mt-8 text-sm">&copy; 2025 Hexa-AI. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- ===== BOUTON "RETOUR EN HAUT" ===== -->
-    <a href="#" id="to-top-button" class="fixed bottom-8 right-8 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-opacity duration-300 opacity-0 pointer-events-none" aria-label="Retour en haut">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="container nav__inner">
+    <a href="#" class="nav__logo" aria-label="Hexa-AI - Accueil">
+      <img src="img/Hexa-AI dark.png" alt="Hexa-AI">
     </a>
+    <ul class="nav__links">
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#produit">Notre Produit</a></li>
+      <li><a href="#contact" class="btn btn--primary btn--small">Contact</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-panel">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__panel" id="nav-panel">
+    <a href="#solutions">Solutions</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#produit">Notre Produit</a>
+    <a href="#contact" class="btn btn--primary">Contact</a>
+  </div>
+</nav>
 
-    <script>
-        const toTopButton = document.getElementById('to-top-button');
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__nodes" aria-hidden="true">
+    <span class="hero__node"></span>
+    <span class="hero__node"></span>
+    <span class="hero__node"></span>
+    <span class="hero__node"></span>
+    <span class="hero__node"></span>
+    <span class="hero__node"></span>
+  </div>
+  <div class="container">
+    <div class="hero__inner">
+      <span class="eyebrow">Hexa-AI · Lyon — Brignais (69)</span>
+      <h1>Vous n'avez pas d'automaticien en interne&nbsp;? <strong>C'est exactement pour ça qu'on existe.</strong></h1>
+      <p class="hero__sub">Hexa-AI automatise, connecte et modernise vos installations industrielles — là où les autres s'arrêtent.</p>
+      <div class="hero__ctas">
+        <a href="https://calendar.app.google/kLXvjUkXtg4DYdHQ8" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+          Parlons de votre projet →
+        </a>
+        <a href="#realisations" class="btn btn--ghost">Voir nos réalisations</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    Scroll
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</header>
 
-        window.addEventListener('scroll', () => {
-            // Affiche le bouton après 300px de défilement
-            if (window.scrollY > 300) {
-                toTopButton.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                toTopButton.classList.add('opacity-0', 'pointer-events-none');
-            }
+<!-- ============ SECTION 2 — SITUATIONS ============ -->
+<section class="section situations" id="solutions">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow reveal">Les cas où on intervient</span>
+      <h2 class="reveal delay-1">Vous vous reconnaissez dans une de ces situations&nbsp;?</h2>
+    </div>
+    <div class="situations__grid">
+      <article class="situation reveal">
+        <div class="situation__num">CAS 01</div>
+        <h3>L'application orpheline</h3>
+        <p>Votre système tourne, mais le prestataire d'origine a disparu et personne ne sait plus comment le faire évoluer. Chaque modification est un risque.</p>
+      </article>
+      <article class="situation reveal delay-1">
+        <div class="situation__num">CAS 02</div>
+        <h3>L'installation non connectée</h3>
+        <p>Vos machines fonctionnent mais vous n'avez aucune visibilité à distance. Quand quelque chose s'arrête, vous l'apprenez trop tard.</p>
+      </article>
+      <article class="situation reveal delay-2">
+        <div class="situation__num">CAS 03</div>
+        <h3>Le projet hors standard</h3>
+        <p>Votre projet est prescrit sur une plateforme que vos intégrateurs habituels ne maîtrisent pas. Wago, CODESYS, Johnson Controls — vous cherchez le bon interlocuteur.</p>
+      </article>
+      <article class="situation reveal delay-3">
+        <div class="situation__num">CAS 04</div>
+        <h3>Pas de ressource en interne</h3>
+        <p>Vous avez des projets d'automatisme mais pas d'équipe dédiée. Vous cherchez un partenaire technique de confiance, pas un prestataire qu'il faut manager.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — DOMAINES ============ -->
+<section class="section domains">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow reveal">Ce qu'on fait</span>
+      <h2 class="reveal delay-1">Nos trois domaines d'intervention</h2>
+    </div>
+    <div class="domains__grid">
+
+      <article class="domain reveal">
+        <div class="domain__icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+        </div>
+        <h3>Automatisme &amp; Intégration</h3>
+        <p>Conception et programmation de vos systèmes automatisés sur les plateformes que vous avez choisies — CODESYS, Wago, Beckhoff, Siemens, Schneider, Johnson Controls. Même quand personne d'autre ne veut s'y coller.</p>
+      </article>
+
+      <article class="domain reveal delay-1">
+        <div class="domain__icon">
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+        </div>
+        <h3>Supervision &amp; Connectivité à distance</h3>
+        <p>Visualisation temps réel, alertes, rapports automatisés. On connecte vos installations existantes sans tout reconstruire, via notre box HAI-P200 ou les outils que vous utilisez déjà — Ignition, PC-Vue, Grafana.</p>
+      </article>
+
+      <article class="domain reveal delay-2">
+        <div class="domain__icon">
+          <svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/></svg>
+        </div>
+        <h3>Modernisation &amp; Reprise d'application</h3>
+        <p>Votre logiciel a été développé il y a 15 ans et plus personne ne sait le faire évoluer&nbsp;? On reprend la main, on documente, on migre vers un standard moderne et maintenable.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — PRODUIT ============ -->
+<section class="section product" id="produit">
+  <div class="container">
+    <div class="product__layout">
+      <div class="product__copy">
+        <span class="eyebrow reveal">Notre produit</span>
+        <h2 class="reveal delay-1">Le HAI-P200-4G</h2>
+        <p class="lead reveal delay-2">Connectez votre parc machine à distance. Dès le premier jour.</p>
+        <p class="reveal delay-2">Le HAI-P200-4G est notre passerelle industrielle clé en main. Elle collecte les données de vos équipements (Modbus, OPC-UA, S7…), les visualise en temps réel, envoie des alertes intelligentes et ouvre un accès distant sécurisé via VPN intégré — sans développement, sans licence, sans intervention IT.</p>
+        <p class="reveal delay-2">Conçu pour les constructeurs de machines qui veulent superviser leur parc installé sans exploser leur coût de SAV.</p>
+        <div class="product__badges reveal delay-3">
+          <span class="product__badge">🔌 Installation en <strong>moins d'une heure</strong></span>
+          <span class="product__badge">📡 4G + <strong>VPN Tailscale</strong> intégré</span>
+          <span class="product__badge">💶 À partir de <strong>590 €</strong> — sans abonnement</span>
+        </div>
+        <a href="https://edge.hexa-ai.fr" target="_blank" rel="noopener noreferrer" class="btn btn--primary reveal delay-3">Découvrir le HAI-P200 →</a>
+      </div>
+
+      <div class="product__visual reveal delay-2">
+        <img src="img/Box_Monitoring_HAI_P200.webp" alt="Boîtier HAI-P200-4G" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORMS STRIP ============ -->
+<section class="section platforms" aria-labelledby="platforms-label">
+  <div class="container">
+    <p class="platforms__label" id="platforms-label">Plateformes &amp; écosystème technologique</p>
+    <div class="platforms__grid reveal">
+      <span class="platform">CODESYS</span>
+      <span class="platform">WAGO</span>
+      <span class="platform">Beckhoff</span>
+      <span class="platform">SIEMENS</span>
+      <span class="platform">Schneider Electric</span>
+      <span class="platform">Isma Controlli</span>
+      <span class="platform">Johnson Controls</span>
+      <span class="platform">Ignition</span>
+      <span class="platform">PC-Vue</span>
+      <span class="platform">Node-RED</span>
+      <span class="platform">Grafana</span>
+      <span class="platform">Tailscale</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 — RÉFÉRENCES ============ -->
+<section class="section refs" id="realisations">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow reveal">Réalisations</span>
+      <h2 class="reveal delay-1">Ils nous ont fait confiance</h2>
+    </div>
+
+    <div class="refs__grid">
+
+      <article class="ref reveal">
+        <div class="ref__img"><img src="img/ugur-akdemir-V_Q25mLo6c8-unsplash.jpg" alt="Quai de gare avec train à l'arrêt" loading="lazy"></div>
+        <div class="ref__body">
+          <span class="ref__label">CAS 01 — Ferroviaire</span>
+          <h3 class="ref__title">Opérateur ferroviaire national</h3>
+          <p class="ref__desc">Développement d'un standard CODESYS pour la gestion d'éclairage DALI de quais de gares — transformant un projet de programmation complexe en simple configuration.</p>
+          <div class="ref__tags">
+            <span class="ref__tag">#CODESYS</span>
+            <span class="ref__tag">#DALI</span>
+            <span class="ref__tag">#Ferroviaire</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref reveal delay-1">
+        <div class="ref__img"><img src="img/tunnel.jpg" alt="Tunnel autoroutier" loading="lazy"></div>
+        <div class="ref__body">
+          <span class="ref__label">CAS 02 — Infrastructure</span>
+          <h3 class="ref__title">Tunnel autoroutier</h3>
+          <p class="ref__desc">En partenariat avec <strong>Eiffage / Clemessy</strong>, intégration automatisme sur plateforme Wago pour la gestion d'éclairage d'un tunnel autoroutier&nbsp;: <strong>450 luminaires DALI</strong> pilotés et répartis sur plusieurs automates.</p>
+          <div class="ref__tags">
+            <span class="ref__tag">#Wago</span>
+            <span class="ref__tag">#Infrastructure</span>
+            <span class="ref__tag">#Eclairage</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref reveal delay-2">
+        <div class="ref__img"><img src="img/jonas-kernwein-4AQjVB2UrdU-unsplash.jpg" alt="Eau et bulles vues sous l'eau" loading="lazy"></div>
+        <div class="ref__body">
+          <span class="ref__label">CAS 03 — Eau / Migration</span>
+          <h3 class="ref__title">IMAGEAU <span class="ref__title-aux">(Groupe SAUR)</span></h3>
+          <p class="ref__desc">Ré-ingénierie complète d'une application d'analyse de nappes phréatiques — migration d'un logiciel C++ obsolète vers CODESYS, avec intégration d'un protocole de communication propriétaire. Une application que personne d'autre ne voulait reprendre.</p>
+          <div class="ref__tags">
+            <span class="ref__tag">#CODESYS</span>
+            <span class="ref__tag">#TraitementEau</span>
+            <span class="ref__tag">#Migration</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref reveal">
+        <div class="ref__img"><img src="img/compagnons-yZmHFF-g-W0-unsplash.jpg" alt="Gaines et équipements de traitement d'air" loading="lazy"></div>
+        <div class="ref__body">
+          <span class="ref__label">CAS 04 — GTB / GTC · CVC</span>
+          <h3 class="ref__title">
+            <a class="ref__title-link" href="https://www.scorp-io.com/use-cases/smart-building" target="_blank" rel="noopener">
+              Scorp-IO
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </h3>
+          <p class="ref__desc">En partenariat avec <strong>Scorp-IO</strong>, éditeur SaaS dédié à la GTB/GTC, on prend en charge la partie terrain : intégration de centrales de traitement d'air avec régulation température, CO2, hygrométrie. Les données mesurées remontent proprement vers leur plateforme — eux se concentrent sur leur produit, on s'occupe du field.</p>
+          <div class="ref__tags">
+            <span class="ref__tag">#GTB</span>
+            <span class="ref__tag">#CVC</span>
+            <span class="ref__tag">#SaaS</span>
+            <span class="ref__tag">#HAI-P200</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref reveal delay-1">
+        <div class="ref__img"><img src="img/navire-mn-calao.webp" alt="Navire MN Calao" loading="lazy"></div>
+        <div class="ref__body">
+          <span class="ref__label">CAS 05 — Maritime / Edge</span>
+          <h3 class="ref__title">Armateur fluvial</h3>
+          <p class="ref__desc">Trois projets successifs — architecture CODESYS distribuée entre les bateaux et le cloud. Implémentation sur-mesure du protocole NMEA sur UDP, absent nativement de CODESYS. Intégration capteurs Zigfox, HTTP, MQTT et OPC-UA. De l'edge au cloud, sur une seule plateforme.</p>
+          <div class="ref__tags">
+            <span class="ref__tag">#CODESYS</span>
+            <span class="ref__tag">#Maritime</span>
+            <span class="ref__tag">#Edge</span>
+            <span class="ref__tag">#Cloud</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact__inner">
+      <span class="eyebrow reveal">Contact</span>
+      <h2 class="reveal delay-1">Parlons de votre projet</h2>
+      <p class="lead reveal delay-2">Votre projet sort du cadre standard&nbsp;? <strong>C'est exactement là qu'on commence.</strong></p>
+      <p class="note reveal delay-2">On répond dans la journée. Pas de commercial, vous parlez directement avec l'ingénieur qui va travailler sur votre projet.</p>
+      <div class="contact__cta reveal delay-3">
+        <a href="https://calendar.app.google/kLXvjUkXtg4DYdHQ8" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Réserver un créneau de 30 min →</a>
+      </div>
+      <div class="contact__info reveal delay-3">
+        <div class="contact__item">
+          <span class="label">Email</span>
+          <a class="value" href="mailto:contact@hexa-ai.fr">contact@hexa-ai.fr</a>
+        </div>
+        <div class="contact__item">
+          <span class="label">Téléphone</span>
+          <a class="value" href="tel:+33666740458">06 66 74 04 58</a>
+        </div>
+        <div class="contact__item">
+          <span class="label">Bureau</span>
+          <span class="value">Bâtiment Terraditta — Bureau B2<br>287 rue Barthélémy Thimonnier<br>69530 Brignais (Lyon Sud)<br><span style="color:var(--text-dim);font-size:13px;font-weight:400">Interventions France entière</span></span>
+        </div>
+        <div class="contact__item">
+          <span class="label">Siège social</span>
+          <span class="value">6 rue Jean Marie Chevalier<br>69390 Vourles, France</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer__top">
+      <div class="newsletter" id="newsletter">
+        <p class="newsletter__title">Restez informé</p>
+        <p class="newsletter__sub">Cas clients, retours d'expérience, nouveautés produit. Trimestriel, sans spam.</p>
+        <form class="newsletter__form" id="newsletter-form" novalidate>
+          <input
+            type="email"
+            class="newsletter__input"
+            name="email"
+            placeholder="votre@email.fr"
+            aria-label="Adresse e-mail"
+            required>
+          <button type="submit" class="newsletter__btn">S'inscrire</button>
+        </form>
+        <p class="newsletter__msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="footer__right">
+        <ul class="footer__links">
+          <li><a href="https://hexa-ai.fr" target="_blank" rel="noopener noreferrer">hexa-ai.fr</a></li>
+          <li><a href="https://codesys.hexa-ai.fr" target="_blank" rel="noopener noreferrer">codesys.hexa-ai.fr</a></li>
+          <li><a href="https://edge.hexa-ai.fr" target="_blank" rel="noopener noreferrer">edge.hexa-ai.fr</a></li>
+        </ul>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/company/hexaai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Hexa-AI. Tous droits réservés.</p>
+      <ul class="footer__legal">
+        <li><a href="/mentions-legales.html">Mentions légales</a></li>
+        <li><a href="/confidentialite.html">Confidentialité</a></li>
+        <li><a href="/docs/CGV-v2.1.pdf" target="_blank" rel="noopener">CGV</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============ TO TOP ============ -->
+<button type="button" class="to-top" id="toTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script>
+(() => {
+  document.documentElement.classList.replace('no-js', 'js');
+
+  // ===== Nav scroll state
+  const nav = document.querySelector('.nav');
+  let lastScroll = 0;
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('is-scrolled', y > 8);
+    document.getElementById('toTop').classList.toggle('is-visible', y > 600);
+    // parallax bg
+    const bg = document.querySelector('.hero__bg');
+    if (bg && y < window.innerHeight) {
+      bg.style.transform = `translateY(${y * 0.3}px)`;
+    }
+    lastScroll = y;
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ===== Mobile menu
+  const burger = document.querySelector('.nav__burger');
+  const panel = document.querySelector('.nav__panel');
+  const closeMenu = () => {
+    burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+    panel.classList.remove('is-open');
+    nav.classList.remove('is-menu-open');
+    document.body.classList.remove('no-scroll');
+  };
+  burger.addEventListener('click', () => {
+    const open = burger.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(open));
+    panel.classList.toggle('is-open', open);
+    nav.classList.toggle('is-menu-open', open);
+    document.body.classList.toggle('no-scroll', open);
+  });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // ===== Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ===== Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+  const activeIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
         });
-    </script>
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach(s => activeIO.observe(s));
+
+  // ===== Back to top
+  document.getElementById('toTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== Newsletter (Odoo, no-cors fire-and-forget)
+  const newsletter = document.getElementById('newsletter');
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterMsg = document.getElementById('newsletter-msg');
+  const NEWSLETTER_ENDPOINT = 'https://edge.hexa-ai.fr/website_mass_mailing/subscribe';
+  const NEWSLETTER_LIST_ID = 2;
+
+  const setMsg = (text, state) => {
+    newsletterMsg.textContent = text;
+    newsletterMsg.classList.remove('is-error', 'is-success');
+    if (state) newsletterMsg.classList.add('is-' + state);
+  };
+
+  newsletterForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = newsletterForm.querySelector('input[type="email"]');
+    const btn = newsletterForm.querySelector('button[type="submit"]');
+    const email = (input.value || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setMsg('Adresse e-mail invalide.', 'error');
+      input.focus();
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Envoi…';
+    try {
+      // no-cors: we cannot read the response, but the request is sent.
+      // Content-Type forced to text/plain by the browser when no-cors + JSON body,
+      // but Odoo's JSON-RPC routes accept text/plain bodies with valid JSON.
+      await fetch(NEWSLETTER_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          method: 'call',
+          params: {
+            list_id: NEWSLETTER_LIST_ID,
+            value: email,
+            subscription_type: 'email'
+          }
+        })
+      });
+    } catch (_) {
+      // network errors only — Odoo response is opaque in no-cors mode
+    }
+    newsletter.classList.add('is-submitted');
+    setMsg('Merci ! Vous recevrez un e-mail de confirmation dans quelques instants.', 'success');
+  });
+})();
+</script>
+
 </body>
 </html>
-
-
-
-
-

@@ -1,0 +1,49 @@
+# Hexa-AI
+
+> Société d'ingénierie en automatisme industriel basée à Brignais (Lyon Sud, France). Hexa-AI conçoit, modernise et connecte les installations industrielles — automatisme, supervision, connectivité IT/OT — sur les plateformes que les clients ont choisies, y compris quand personne d'autre ne veut s'y coller.
+
+## Identité
+
+- Nom : Hexa-AI
+- Bureau (lieu de travail) : Bâtiment Terraditta — Bureau B2, 287 rue Barthélémy Thimonnier, 69530 Brignais (Lyon Sud), France
+- Siège social : 6 rue Jean Marie Chevalier, 69390 Vourles, France
+- Email : contact@hexa-ai.fr
+- Téléphone : +33 6 66 74 04 58
+- Site corporate : https://www.hexa-ai.fr
+- Site produit (HAI-P200, supervision) : https://edge.hexa-ai.fr
+- Documentation CODESYS : https://codesys.hexa-ai.fr
+- LinkedIn : https://www.linkedin.com/company/hexaai
+- Zone d'intervention : Lyon, Auvergne-Rhône-Alpes et France entière
+
+## Domaines d'intervention
+
+1. **Automatisme & intégration** — programmation de systèmes automatisés sur CODESYS, Wago, Beckhoff, Siemens, Schneider Electric, Isma Controlli, Johnson Controls.
+2. **Supervision & connectivité à distance** — visualisation temps réel, alertes, rapports automatisés. Intégration sur installations existantes via la box HAI-P200, Ignition, PC-Vue, Grafana, Node-RED.
+3. **Modernisation & reprise d'application** — récupération et migration de logiciels obsolètes vers des standards modernes maintenables.
+
+## Produit phare
+
+- **HAI-P200-4G** — passerelle industrielle clé en main : collecte Modbus / OPC-UA / S7, visualisation temps réel, alertes, accès distant via VPN Tailscale intégré, 4G. Sans développement, sans licence, sans intervention IT. À partir de 590 € sans abonnement. Plus d'infos : https://edge.hexa-ai.fr
+
+## Plateformes & technologies maîtrisées
+
+CODESYS, Wago, Beckhoff, Siemens, Schneider Electric, Isma Controlli, Johnson Controls, Ignition (SCADA), PC-Vue, Node-RED, Grafana, Tailscale. Protocoles : Modbus, OPC-UA, S7, NMEA sur UDP, DALI, MQTT, HTTP, Zigfox.
+
+## Cas clients représentatifs
+
+- **Opérateur ferroviaire national** — standard CODESYS pour la gestion d'éclairage DALI de quais de gares (transformation d'un projet de programmation complexe en simple configuration).
+- **Tunnel autoroutier (en partenariat avec Eiffage / Clemessy)** — intégration automatisme sur plateforme Wago, gestion d'éclairage : 450 luminaires DALI répartis sur plusieurs automates.
+- **IMAGEAU (Groupe SAUR)** — ré-ingénierie d'une application d'analyse de nappes phréatiques, migration C++ vers CODESYS avec intégration d'un protocole propriétaire.
+- **Scorp-IO (éditeur SaaS GTB/GTC)** — partie terrain : intégration de CTA (centrales de traitement d'air) avec régulation température, CO2, hygrométrie. Données remontées vers leur SaaS. Détails : https://www.scorp-io.com/use-cases/smart-building
+- **Armateur fluvial** — architecture CODESYS distribuée bateaux/cloud, implémentation NMEA sur UDP, intégration capteurs Zigfox/HTTP/MQTT/OPC-UA. De l'edge au cloud sur une seule plateforme.
+
+## Pour quel type de prospect
+
+- Vous avez une **application orpheline** (le prestataire d'origine a disparu).
+- Vous avez une **installation non connectée** (vous l'apprenez quand quelque chose s'arrête).
+- Vous avez un **projet hors standard** prescrit sur une plateforme rare (Wago, CODESYS, Johnson Controls, Isma Controlli…).
+- Vous **n'avez pas d'équipe automatisme en interne** et cherchez un partenaire technique de confiance.
+
+## Prendre contact
+
+Réservation directe d'un créneau de 30 minutes avec l'ingénieur qui travaillera sur votre projet (pas de commercial intermédiaire) : https://calendar.app.google/kLXvjUkXtg4DYdHQ8
